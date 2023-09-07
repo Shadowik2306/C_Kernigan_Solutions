@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int invert(int x, int p, int n) {
+int rightrot(int x, int p, int n) {
     int b = ((1 << (p + n)) - 1) & (~0 << p);
 //    printf("%b\n", b);
 //    printf("%b\n", ~(x & (~(~0 << n) << p)) & b);
@@ -9,6 +9,6 @@ int invert(int x, int p, int n) {
 }
 
 int main() {
-    printf("%b\n", invert(0b1111001010001111, 6, 4));
+    printf("%b\n", rightrot(0b1111001010001111, 6, 4));
     return 0;
 }
